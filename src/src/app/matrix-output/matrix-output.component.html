@@ -1,0 +1,18 @@
+<div *ngIf="matrix">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Matrix</ion-card-title>
+    </ion-card-header>
+    
+    <ion-item>
+      <table>
+        <tr *ngFor="let row of matrix; let rowIndex = index">
+          <td *ngFor="let col of row; let colIndex = index"
+              [ngClass]="highlightedMatrix[rowIndex][colIndex]">
+            {{ col }}
+          </td>
+        </tr>
+      </table>
+    </ion-item>
+  </ion-card>
+</div>

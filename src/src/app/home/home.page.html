@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Модульна контрольна робота. Варіант 1. Білич Ю. С.
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-matrix-input (matrixSubmitted)="handleMatrix($event)"></app-matrix-input>
+  <app-matrix-output [matrix]="submittedMatrix"></app-matrix-output>
+  <div *ngIf="result !== null">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Result</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Number of pairs: {{ result }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
